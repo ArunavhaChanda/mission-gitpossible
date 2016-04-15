@@ -1,0 +1,30 @@
+textarea, #prefix {
+    background-color: #000;
+    border: 1px solid #000;
+    color: #ffffff;
+    padding: 8px;
+    font-family: courier new;
+    resize: none;
+}
+
+#terminal{
+	position: absolute;
+	top: 80%;
+	left: 2%;
+	width: 70%;
+    height: 15%;
+}
+
+#prefix{
+	width: 12px;
+	height: 15%;
+	padding-top: 8px;
+	padding-left: 5px;
+	position: absolute;
+	top: 80.2%;
+}
+
+*.unselectable {
+   -webkit-user-select: none;
+    moz-user-select:none
+}  
