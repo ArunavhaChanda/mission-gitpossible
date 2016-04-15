@@ -4,31 +4,37 @@
         <meta charset="UTF-8" />
         <title>hello phaser!</title>
         <script src="js/phaser.min.js"></script>
+        <script src="js/jquery-1.11.3.js"></script>
+        <script src="js/simulateTerminal.js"></script>
+        <link href = "styles/createTerminal.css" type = "text/css" rel = "stylesheet" />
     </head>
     <body>
-
+        <textarea id="terminal" spellcheck = false unselectable="on">
+        </textarea>
+        <div id = "prefix">
+            ->
+        </div>
     <script type="text/javascript">
 
-    window.onload = function() {
 
-        var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create });
+    var game = new Phaser.Game(800, 500, Phaser.AUTO, '', { preload: preload, create: create });
 
-        function preload () {
+    function preload () {
+        game.load.image('logo', 'images/phaser.png');
+    }
 
-            game.load.image('logo', 'phaser.png');
+    var terminal;
+    var code = '';
 
-        }
+    function create () {
+        var logo = game.add.sprite(game.world.centerX, game.world.centerY, 'logo');
+        logo.anchor.setTo(0.5, 0.5);
+    }
 
-        function create () {
+    function update(){
+    }
 
-            var logo = game.add.sprite(game.world.centerX, game.world.centerY, 'logo');
-            logo.anchor.setTo(0.5, 0.5);
-
-        }
-
-    };
 
     </script>
-
     </body>
 </html>
